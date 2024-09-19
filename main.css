@@ -6,6 +6,8 @@
 
 body {
     background-color: #ee994a;
+    overflow-x: hidden;
+    max-width: 100%;
 }
 
 .container {
@@ -14,6 +16,7 @@ body {
     align-items: center;
     justify-content: center;
     margin-left: 150px;
+    max-width: 100%;
 }
 
 header {
@@ -22,6 +25,7 @@ header {
     justify-content: center;
     background-color: #915824;
     border: 10px solid #fff;
+    width: 100%;
 }
 
 .header-image {
@@ -130,4 +134,105 @@ footer {
     font-weight: bold;
     background-color: #fff;
     padding: 10px;
+}
+
+
+
+@media screen and (max-width: 768px) {
+    body {
+        overflow-x: hidden; /* Garante que o scroll horizontal não ocorra */
+    }
+
+    .container {
+        flex-direction: column;
+        padding: 10px;
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    header {
+        flex-direction: column;
+        padding: 20px;
+        width: 100%;
+    }
+
+    .header-image {
+        width: 100%;
+        max-width: 200px;
+        padding: 10px;
+    }
+
+    .header-nav {
+        flex-direction: column;
+        align-items: center;
+        margin-left: 0;
+    }
+
+    .header-item {
+        margin: 10px 0;
+        font-size: 16px;
+    }
+
+    .image-container {
+        max-width: 100%;
+        padding: 10px;
+    }
+
+    .h2-container, .h3-container {
+        font-size: 22px;
+        text-align: center;
+    }
+
+    .p-container {
+        font-size: 16px;
+        text-align: justify;
+    }
+
+    .personagens {
+        flex-direction: column;
+        width: 100%;
+        padding: 10px;
+    }
+
+    .personagem {
+        margin-bottom: 20px;
+        width: 100%;
+        text-align: center;
+    }
+
+    .image-section {
+        width: 150px;
+    }
+
+    .p-section {
+        font-size: 16px;
+        max-width: 100%;
+        padding: 10px;
+    }
+
+    footer {
+        font-size: 14px;
+        padding: 20px;
+        text-align: center;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .h2-container, .h3-container {
+        font-size: 20px;
+    }
+
+    .header-item {
+        font-size: 14px;
+        margin: 5px 0;
+    }
+
+    .image-section {
+        width: 100px;
+    }
+
+    .p-section {
+        font-size: 14px;
+        padding: 5px;
+    }
 }
